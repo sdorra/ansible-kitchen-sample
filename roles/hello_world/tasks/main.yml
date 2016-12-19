@@ -1,0 +1,9 @@
+---
+
+- name: hello_world container
+  docker_container:
+    name: hello_world
+    image: dockercloud/hello-world:latest
+    restart_policy: always
+    ports:
+    - "80:80"
