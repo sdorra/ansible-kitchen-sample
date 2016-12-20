@@ -26,22 +26,22 @@ bundle exec kitchen create
 ### Installation
 
 We are using [Ansible](https://www.ansible.com/) and [Docker](https://www.docker.com/)
-for the installation of our services on the server. [Ansible](https://www.ansible.com/) is
-used to install [Docker](https://www.docker.com/) prepare volumes and for the 
-orchestration of our containers. The [Ansible](https://www.ansible.com/) configuration is
-located at playbook.yml and the roles are located at roles. To run the playbook on 
-the server just execute:
+for the installation of our services. [Ansible](https://www.ansible.com/) is
+used to install [Docker](https://www.docker.com/), prepare volumes and for container
+orchestration. The [Ansible](https://www.ansible.com/) configuration is
+located at playbook.yml and the roles are located at the roles directory. 
+To run the playbook on the server just execute:
 
 ```bash
 bundle exec kitchen converge
 ```
 
-This command can be used multiple times, after each change of roles or playbook.
+This command can be used multiple times, after each change.
 
 ### Tests
 
 Tests are located at tests test/integration/*suitename* the executed 
-suites can be configured in _.kitchen.yml_, in this example the only 
+suites can be configured in *.kitchen.yml*, in this example the only 
 configure suite is default.
 
 The tests can be written with [ServerSpec](http://serverspec.org/) or 
@@ -56,7 +56,7 @@ If you want to test your installation, execute the following command:
 bundle exec kitchen verify
 ```
 
-This command can be used multiple times, after each change of installation or tests.
+This command can be used multiple times, after each change of the installation or the tests.
 
 ## Continious Integration
 
